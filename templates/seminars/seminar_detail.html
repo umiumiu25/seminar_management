@@ -1,0 +1,8 @@
+<!-- templates/seminars/seminar_detail.html -->
+<h2>{{ seminar.title }}</h2>
+<p>{{ seminar.description }}</p>
+<p>Date: {{ seminar.date }}</p>
+<form method="post" action="{% url 'apply_seminar' seminar.pk %}">
+  {% csrf_token %}
+  <button type="submit">Apply</button>
+</form>

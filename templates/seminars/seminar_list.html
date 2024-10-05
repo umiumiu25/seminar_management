@@ -1,0 +1,9 @@
+<!-- templates/seminars/seminar_list.html -->
+<h2>Seminars</h2>
+<ul>
+  {% for seminar in seminars %}
+  <li>
+    <a href="{% url 'seminar_detail' seminar.pk %}">{{ seminar.title }}</a> - {{ seminar.date }}
+  </li>
+  {% endfor %}
+</ul>
